@@ -1,0 +1,69 @@
+#zad1
+print("zad1")
+string="Zmienna typu string"
+liczba_int=24
+liczba_float=24.5
+print(string)
+print(liczba_int)
+print(liczba_float)
+
+#zad2
+print("zad2")
+dodawanie= 1 + 2
+odejmowanie= 2 - 1
+mnożenie= 2 * 4
+dzielenie= 10 / 2
+print(dodawanie)
+print(odejmowanie)
+print(mnożenie)
+print(dzielenie)
+
+#zad3
+print("zad3")
+liczba1=20
+print(liczba1)
+liczba1+=5
+print(liczba1)
+liczba1-=5
+print(liczba1)
+liczba1*=5
+print(liczba1)
+liczba1/=5
+print(liczba1)
+liczba1**=5
+print(liczba1)
+liczba1//=5
+print(liczba1)
+
+#zad4
+#Urwane polecenie w otrzymanym pliku
+
+#zad5
+print("zad5")
+imie="LUKASZ"
+nazwisko="ZAKRZEWSKI"
+print(imie.capitalize() + " " + nazwisko.capitalize())
+
+#zad6
+print("zad6")
+piosenka="lalala"
+skrypt= piosenka.count("la")
+print(skrypt)
+
+#zad7
+print("zad7")
+imie="Lukasz Z"
+skrypt=(imie[1], imie[7])
+print(skrypt)
+#zad8
+print("zad8")
+podzial=piosenka.split("a", 2)
+print(podzial)
+
+#zad9
+print("zad9")
+napis="to jest napis w python"
+print(napis)
+print(float(2.25))
+liczba5=256
+print(hex(liczba5))
