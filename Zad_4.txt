@@ -1,0 +1,48 @@
+#Zad1
+print("Zad1")
+plik=open("parzyste.txt", "w")
+for x in range(100):
+    if x % 4 == 0:
+        plik.write( "\n"+ str(x))
+
+
+plik.close()
+#Zad2
+print("Zad2")
+plik=open("parzyste.txt", "r")
+for linie in plik:
+    print((linie))
+
+plik.close()
+
+#Zad3
+with open("parzyste.txt", "a") as plik:
+    plik.write("\nZapis linijki do pliku")
+    plik.write("\nDruga linijka do pliku")
+with open("parzyste.txt", "r") as odczyt:
+    wypisz = odczyt.read()
+    print(wypisz)
+    print("\n")
+
+#Zad4
+class NaZakupy:
+
+    def __init__(self,nazwa_produktu, ilosc, jednostka_miary, cena_jed):
+        self.nazwa_produktu = nazwa_produktu
+        self.ilosc = ilosc
+        self.jednostka_miary = jednostka_miary
+        self.cena_jed = cena_jed
+
+    def wyswietl_produkt(self):
+        return self.nazwa_produktu,self.ilosc,self.jednostka_miary,self.cena_jed,"zł/kg"
+
+    def ile_produktu(self):
+        return (str(self.ilosc) + self.jednostka_miary)
+
+    def ile_kosztuje(self):
+        return  self.ilosc * self.cena_jed
+
+obiekt = NaZakupy("Ziemniaki",2,"kg",5)
+print(obiekt.wyswietl_produkt())
+print(obiekt.ile_produktu())
+print(obiekt.ile_kosztuje())
