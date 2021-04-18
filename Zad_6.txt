@@ -1,0 +1,32 @@
+import numpy as np
+
+#Zad_1
+a= np.arange(start=3, stop=46, step=3)
+print(a)
+
+#Zad_2
+b = np.array([4.2,4.5,5.2])
+c = b.astype('int64')
+print(c)
+
+#Zad_3
+n= input("Podaj liczbe calkowita")
+n=int(n)
+d= np.arange(1,n*n)
+print(d)
+
+#Zad_4
+x= input("Podaj liczbe ")
+x=int(x)
+y= input("Podaj ilosc kolejnych poteg")
+y=int(y)
+print(np.logspace(1,y,y,base=x))
+
+#Zad_5
+w= input("Podaj dlugosc wektora")
+w=int(w)
+wektor =np.arange(w)
+odwrocony=np.flip(wektor)
+print("To jest odwrocony wektor:",odwrocony)
+mat_diag=np.diag([a for a in range(w)])
+print(mat_diag)
