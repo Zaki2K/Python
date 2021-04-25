@@ -1,0 +1,46 @@
+import numpy as np
+#Zad_1
+a = np.array([[1],[2],[3]])
+b = np.array([[4],[5],[6]])
+c= a*b
+print(c)
+#Zad_2
+
+d = np.array([[3,4,5],[5,6,7],[8,8,9]])
+e = np.array([[1,2,3,4],[5,6,7,8],[4,5,6,7],[8,9,5,1]])
+print(d.min(axis=1))
+print(e.min(axis=1))
+
+#Zad_3
+A = np.array(a)
+B = np.array(b).T
+print(A.dot(B))
+
+#Zad_4
+x = np.array([[1],[2],[3]])
+f = np.array([[0],[-2],[np.pi]])
+print(x * f)
+
+#Zad_5
+k = np.array([[1,4],[2,5],[3,9]])
+a=(np.sin(k))
+
+#Zad_6
+n = np.array([[2,8],[4,1],[2,5]])
+b=(np.sin(n))
+
+#Zad_7
+print(a+b)
+
+#Zad_8
+x= np.arange(9).reshape(3,3)
+for m in x:
+    print(m)
+#Zad_9
+k= np.arange(9).reshape(3,3)
+for m in k.flat:
+    print(m)
+#Zad_10
+a= np.arange(81).reshape((9,9))
+b = a.reshape((9,9))
+print(b)
