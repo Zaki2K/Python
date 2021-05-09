@@ -1,0 +1,27 @@
+import numpy as np
+import pandas as pd
+import xlrd
+import openpyxl
+
+#Zad_1
+imiona=pd.read_excel('c:/Users/Zaki/PycharmProjects/pythonProject/datasets/imiona.xlsx')
+dane= pd.DataFrame(imiona)
+#Zad_2
+#for row in dane.itertuples():
+#    if row.Liczba > 1000:
+#        print(row.Rok, row.Imie, row.Liczba, row.Plec)
+
+#for row in dane.itertuples():
+#    if row.Imie == 'ŁUKASZ':
+#        print(row.Rok, row.Imie, row.Liczba, row.Plec)
+
+#print(dane['Liczba'].sum())
+
+#x= [((dane['Rok'] >=2000) & (dane['Rok']<=2005)).sum()]
+#print(x)
+
+
+#print(len(dane['Plec'].sum()))
+
+
+#print(dane['Imie'].value_counts()[0:2])
