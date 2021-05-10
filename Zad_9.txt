@@ -12,4 +12,12 @@ wyk.set_xlabel('Rocznik')
 wyk.set_ylabel('Liczba urodzonych')
 plt.show()
 #Zad_2
+df_3 = pd.read_excel('imiona.xlsx', header=0)
+print(df)
 
+grupa = df_3.groupby(['Plec']).agg({'Liczba':['sum']})
+
+wykres = grupa.plot.bar()
+plt.xticks(rotation=0)
+plt.title('Kobiety i mezczyzni')
+plt.show()
