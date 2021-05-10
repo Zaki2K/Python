@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import xlrd
+import openpyxl
+
+#Zad 1.
+df_1 = pd.read_excel('imiona.xlsx', header=0)
+df_2 = df_1.groupby(['Rok']).agg({'Liczba': ['sum']})
+wyk = df_2.plot()
+wyk.set_xlabel('Rocznik')
+wyk.set_ylabel('Liczba urodzonych')
+plt.show()
+#Zad_2
+
