@@ -1,0 +1,35 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import xlrd
+import openpyxl
+
+#Zad 1.
+df_1 = pd.read_excel('imiona.xlsx', header=0)
+df_2 = df_1.groupby(['Rok']).agg({'Liczba': ['sum']})
+wyk = df_2.plot()
+wyk.set_xlabel('Rocznik')
+wyk.set_ylabel('Liczba urodzonych')
+plt.show()
+#Zad_2
+df_3 = pd.read_excel('imiona.xlsx', header=0)
+grupa = df_3.groupby(['Plec']).agg({'Liczba':['sum']})
+wykres = grupa.plot.bar()
+plt.xticks(rotation=0)
+plt.title('Kobiety i mezczyzni')
+plt.show()
+#Zad_3
+df4 = pd.read_excel('imiona.xlsx', header=0)
+df4 = df4[(df4["Rok"]>=2012) & (df4["Rok"]<=2017)]
+grupa2 = df4.groupby(["Plec"]).agg({"Liczba":["sum"]})
+wykres1 = grupa2.plot.pie(subplots=True, autopct="%.2f %%", fontsize=15, figsize=(5,5), legend=(0,0))
+plt.legend()
+plt.title(" Ilość urodzonych chłopców i dziewczynek w ostatnich 5 latach w %")
+plt.show()
+#Zad_4
+df5 = pd.read_csv("zamowienia.csv", header=0, sep=";")
+grupa3 = df5.groupby(["Sprzedawca"]).agg({"idZamowienia": ["count"]})
+wykres2 = grupa3.plot.bar()
+wykres2.legend()
+plt.title("Ilość złożonych zamówień przez poszczególnych sprzedawców")
+plt.show()
