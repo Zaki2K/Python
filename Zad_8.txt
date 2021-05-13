@@ -20,8 +20,8 @@ dane= pd.DataFrame(imiona)
 #x= [((dane['Rok'] >=2000) & (dane['Rok']<=2005)).sum()]
 #print(x)
 
-
 #print(len(dane['Plec'].sum()))
 
+#print(dane.sort_values('Liczba', ascending=False).groupby(['Rok', 'Plec']).nth(0))
 
-#print(dane['Imie'].value_counts()[0:2])
+#print(dane.groupby(['Plec','Imie']).agg({'Liczba': ['sum']}).sort_values(('Liczba', 'sum'), ascending=False).iloc[[0,1]])
