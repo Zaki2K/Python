@@ -20,7 +20,7 @@ plt.title('Kobiety i mezczyzni')
 plt.show()
 #Zad_3
 df4 = pd.read_excel('imiona.xlsx', header=0)
-df4 = df4[(df4["Rok"]>=2013) & (df4["Rok"]<=2018)]
+df4 = df4[(df4["Rok"]>=2012) & (df4["Rok"]<=2017)]
 grupa2 = df4.groupby(["Plec"]).agg({"Liczba":["sum"]})
 wykres1 = grupa2.plot.pie(subplots=True, autopct="%.2f %%", fontsize=15, figsize=(5,5), legend=(0,0))
 plt.legend()
