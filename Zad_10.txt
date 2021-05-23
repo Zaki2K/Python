@@ -1,0 +1,46 @@
+import matplotlib.pyplot as plt
+import numpy as np
+#Zad_1
+x=range(20,40)
+y=[1/y for y in x]
+plt.plot(x,y, label='f(x)=1/x')
+plt.axis([20, 40, 0.02, 0.05])
+plt.xlabel('X')
+plt.ylabel('F(x)')
+plt.legend()
+plt.show()
+
+#Zad_2
+
+x=range(20,40)
+y=[1/y for y in x]
+plt.plot(x,y,'bo--')
+plt.axis([20, 40, 0.02, 0.05])
+plt.xlabel('x')
+plt.ylabel('1/x')
+plt.title('Wykres funkcji f(x) dla x [20, 40]')
+plt.legend()
+plt.show()
+
+#Zad_3
+x=np.arange(0,45,0.1)
+si_n=np.sin(x)
+co_s=np.cos(x)
+plt.plot(x,si_n,label='sin(x)')
+plt.plot(x,co_s,label='cos(x)')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.legend()
+plt.show()
+
+#Zad_4
+
+x=np.arange(0,45,0.1)
+sinu=2+np.sin(x)
+sin2=np.sin(-x)
+plt.plot(x,sinu,label='sin(x)')
+plt.plot(x,sin2,label='sin(x)')
+plt.title('Wykres sin(x), sin(x)')
+plt.xlabel('sin(x)')
+plt.ylabel('x')
+plt.show()
